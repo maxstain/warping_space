@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-700 flex justify-center">
+  <nav class="bg-gray-700 flex justify-center shadow-2xl">
     <div class="sm:hidden md:h-32 w-48 lg:h-44 md:block">
       <img src="warping space.png" />
     </div>
