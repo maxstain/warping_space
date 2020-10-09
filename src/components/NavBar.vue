@@ -3,7 +3,7 @@
   Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
   Read the documentation to get started: https://tailwindui.com/documentation
 -->
-  <nav class="bg-gray-800">
+  <nav class="bg-gray-700">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -59,16 +59,11 @@
           class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex-shrink-0">
-            <img
-              class="block lg:hidden h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-on-dark.svg"
+            <!-- <img
+              class="hidden lg:block h-auto w-24"
+              src="warping space.png"
               alt="Workflow logo"
-            />
-            <img
-              class="hidden lg:block h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-logo-on-dark.svg"
-              alt="Workflow logo"
-            />
+            /> -->
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex">
@@ -127,6 +122,7 @@
                 id="user-menu"
                 aria-label="User menu"
                 aria-haspopup="true"
+                @click="menu"
               >
                 <img
                   class="h-8 w-8 rounded-full"
@@ -215,5 +211,15 @@
 <script>
 export default {
   name: "NavBar",
+  methods: {
+    menu: function () {
+      var men = document.querySelector("#menu");
+      if (men.classList.contains("hidden")) {
+        men.classList.remove("hidden");
+      } else {
+        men.classList.add("hidden");
+      }
+    },
+  },
 };
 </script>
