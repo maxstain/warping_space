@@ -118,7 +118,7 @@
           <div class="ml-3 relative">
             <div>
               <button
-                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none transition duration-150 ease-in-out"
                 id="user-menu"
                 aria-label="User menu"
                 aria-haspopup="true"
@@ -214,10 +214,13 @@ export default {
   methods: {
     menu: function () {
       var men = document.querySelector("#menu");
+      var userMenu = document.querySelector("user-menu");
       if (men.classList.contains("hidden")) {
         men.classList.remove("hidden");
+        userMenu.classList.replace("border-white", "border-transparent");
       } else {
         men.classList.add("hidden");
+        userMenu.classList.replace("border-transparent", "border-white");
       }
     },
   },
